@@ -17,5 +17,15 @@ get '/named-cat' do
   erb :index
 end
 
+# first, let's write a form-displaying route
+get '/cat-form' do
+  erb :cat_form
+end
+
+post '/named-cat' do
+  p params
+  @name = params[:name]
+  erb :index
+end
 
 
